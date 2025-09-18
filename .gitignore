@@ -1,0 +1,163 @@
+# AI 代码助手配置仓库忽略文件
+
+# 操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# 日志文件
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 依赖目录
+node_modules/
+.npm
+.yarn/
+vendor/
+
+# 环境配置文件 (包含敏感信息)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API密钥和凭证文件
+*.key
+*.pem
+*.p12
+*.p8
+credentials.json
+service-account.json
+auth.json
+
+# 临时文件和缓存
+*.tmp
+*.temp
+.cache/
+.temp/
+temp/
+tmp/
+
+# 备份文件
+*.bak
+*.backup
+*.orig
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 构建产物
+dist/
+build/
+out/
+target/
+
+# 测试覆盖率报告
+coverage/
+.nyc_output/
+*.lcov
+
+# 包管理锁定文件 (可选，根据团队决定)
+# package-lock.json
+# yarn.lock
+# Pipfile.lock
+
+# Python相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+
+# Ruby相关
+*.gem
+*.rbc
+.bundle/
+Gemfile.lock
+
+# Go相关
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Rust相关
+target/
+Cargo.lock
+
+# 特定于此项目的忽略
+# 个人自定义配置 (如果存在)
+local.md
+personal.md
+custom.md
+
+# 实验性配置文件
+experimental/
+draft/
+sandbox/
+
+# 文档草稿
+*.draft.md
+*.wip.md
+
+# 自动生成的文档
+auto-generated/
+
+# 性能测试结果
+benchmark/
+perf/
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 配置模板的实例化文件
+*-instance.md
+*-local.md
+*-dev.md
+
+# AI工具的临时输出
+ai-output/
+generated/
+temp-analysis/
+
+# 大文件
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.iso
+
+# 安全扫描结果
+security-scan/
+*.scan
+
+# 许可证检查结果
+license-check/
