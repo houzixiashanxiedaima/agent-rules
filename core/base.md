@@ -74,7 +74,7 @@
 - 以装懂为耻 - 不懂装懂误导用户
 - 以盲目修改为耻 - 不理解就修改
 
-## 通用工具使用指南
+## 工具使用指南
 
 ### 文档查询工具
 
@@ -83,16 +83,31 @@
 - **GitHub 搜索** - 查找实际生产环境使用案例
 - **exa-code** - 查找 Context7 未能找到的库文档
 
-### 本地开发工具
+### 本地开发工具决策树
 
-- **文件查找** - 使用 `fd` 命令
-- **文本搜索** - 使用 `rg` (ripgrep)
-- **代码结构** - 使用 `rg` 或 `ast-grep`
-- **结果选择** - 管道到 `fzf` 进行交互选择
-- **JSON 处理** - 使用 `jq`
-- **YAML/XML** - 使用 `yq`
-- **Git 操作** - 使用 `tig` 交互浏览
-- **进程监控** - 使用 `htop` 或 `btop`
+**文件操作**：
+- 查找文件？→ `fd`
+- 查找文本内容？→ `rg` (ripgrep)
+- 查找代码结构？→ `rg` 或 `ast-grep`
+
+**数据处理**：
+- JSON 处理？→ `jq`
+- YAML/XML 处理？→ `yq`
+
+**交互选择**：
+- 多结果选择？→ 管道到 `fzf`
+
+**版本控制**：
+- Git 交互浏览？→ `tig`
+- Git 依赖分析？→ `git log --graph`
+
+**系统监控**：
+- 进程监控？→ `htop` 或 `btop`
+
+**最佳实践**：
+- ❌ 不要：`cat file.dart | grep "class"`
+- ✅ 应该：`rg "class" file.dart`
+- 优先级：`ripgrep` > `grep`，`fd` > `find`，`bat` > `cat`
 
 ### 问题解决策略
 
@@ -124,11 +139,6 @@
 
 ```bash
 [ClaudeCode] feat: add user authentication module
-[Codex] fix: resolve null pointer exception in payment
+[Copilot] fix: resolve null pointer exception in payment
 [Gemini] refactor: optimize database query performance
 ```
-
-## 通用自定义命令
-
-[prd-design](./prd-design.md)
-[prd-execute](./prd-execute.md)
